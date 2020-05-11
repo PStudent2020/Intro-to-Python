@@ -13,6 +13,8 @@ total = x + y
 
 total
 
+x = 4
+y= 9999
 # Python Style
 
 # Types
@@ -196,7 +198,7 @@ print('int(5.2)', 'truncates 5.2 to', int(5.2))
 # Including Quotes in Strings
 print('Display "hi" in quotes')
 
-print('Display 'hi' in quotes')
+# print('Display 'hi' in quotes')
 
 print('Display \'hi\' in quotes')
 
@@ -323,7 +325,7 @@ float('6.2') * 3.3
 
 7 < 4
 
-7 > = 4
+7 >= 4
 
 # Chaining Comparisons
 x = 3
@@ -349,7 +351,7 @@ x = 10
 # furnishing, performance, or use of these programs.                     #
 ##########################################################################
 # Section 2.7 Self Check snippets
-7 =< 10
+7 <= 10
 print(5 < 9, 5 <= 9, 5 > 9, 5 >= 9, 5 == 9, 5 != 9)
 
 ##########################################################################
