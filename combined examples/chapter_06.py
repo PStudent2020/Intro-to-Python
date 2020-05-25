@@ -294,7 +294,68 @@ get_ipython().magic('clear')
 # consequential damages in connection with, or arising out of, the       #
 # furnishing, performance, or use of these programs.                     #
 ##########################################################################
+# Section 6.2.6 snippets
+# fig06_01.py
+"""Using a dictionary to represent an instructor's grade book."""
+grade_book = {            
+    'Susan': [92, 85, 100], 
+    'Eduardo': [83, 95, 79],
+    'Azizi': [91, 89, 82],  
+    'Pantipa': [97, 91, 92] 
+}
+
+all_grades_total = 0
+all_grades_count = 0
+
+for name, grades in grade_book.items():
+    total = sum(grades)
+    print(f'Average for {name} is {total/len(grades):.2f}')
+    all_grades_total += total
+    all_grades_count += len(grades)
+    
+print(f"Class's average is: {all_grades_total / all_grades_count:.2f}")
+
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
+
+
+##########################################################################
+# (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
+# Pearson Education, Inc. All Rights Reserved.                           #
+#                                                                        #
+# DISCLAIMER: The authors and publisher of this book have used their     #
+# best efforts in preparing the book. These efforts include the          #
+# development, research, and testing of the theories and programs        #
+# to determine their effectiveness. The authors and publisher make       #
+# no warranty of any kind, expressed or implied, with regard to these    #
+# programs or to the documentation contained in these books. The authors #
+# and publisher shall not be liable in any event for incidental or       #
+# consequential damages in connection with, or arising out of, the       #
+# furnishing, performance, or use of these programs.                     #
+##########################################################################
 # Section 6.2.7 snippets
+# fig06_02.py
+"""Tokenizing a string and counting unique words."""
+
+text = ('this is sample text with several words ' 
+        'this is more sample text with some different words')
+
+word_counts = {}
+
+# count occurrences of each unique word
+for word in text.split():
+    if word in word_counts: 
+        word_counts[word] += 1  # update existing key-value pair
+    else:
+        word_counts[word] = 1  # insert new key-value pair
+
+print(f'{"WORD":<12}COUNT')
+
+for word, count in sorted(word_counts.items()):
+    print(f'{word:<12}{count}')
+
+print('\nNumber of unique words:', len(word_counts))
 # Python Standard Library Module ‘collections‘
 from collections import Counter
 
