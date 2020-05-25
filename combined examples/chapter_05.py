@@ -1,5 +1,5 @@
-# The following will allow for the use of cls() to clear console
-import clear
+# The following will allow for the use of .magic to clear console and variables
+from IPython import get_ipython
 
 # Section 5.2 snippets
 
@@ -106,8 +106,10 @@ a < c
 
 c >= b
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -233,8 +235,9 @@ student_tuple
 
 id(student_tuple)                           # Added by TAA
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -317,8 +320,9 @@ tuple(enumerate(colors))
 for index, value in enumerate(colors):
     print(f'{index}: {value}')
     
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -424,8 +428,9 @@ numbers
 
 id(numbers)
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -510,8 +515,9 @@ del numbers
 
 numbers
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -580,8 +586,9 @@ numbers_tuple
 
 modify_elements(numbers_tuple)
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 
 ##########################################################################
@@ -637,8 +644,9 @@ ascending_colors
 
 colors
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -716,8 +724,9 @@ if key in numbers:
 else:
     print(f'{key} not found')
     
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -828,8 +837,9 @@ copied_list = color_names.copy()
 
 copied_list
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 
 ##########################################################################
@@ -904,8 +914,9 @@ stack
 
 stack.pop()
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -955,8 +966,9 @@ colors2
 
 colors
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -1009,8 +1021,9 @@ squares_of_odds = (x ** 2 for x in numbers if x % 2 != 0)
 
 squares_of_odds 
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 
 ##########################################################################
@@ -1075,8 +1088,9 @@ list(map(lambda x: x ** 2,
 
 [x ** 2 for x in numbers if x % 2 != 0]
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -1156,8 +1170,9 @@ grade_point_averages = [3.5, 4.0, 3.75]
 for name, gpa in zip(names, grade_point_averages):
     print(f'Name={name}; GPA={gpa}')
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
 # Pearson Education, Inc. All Rights Reserved.                           #
@@ -1220,8 +1235,9 @@ for i, row in enumerate(a):
         print(f'a[{i}][{j}]={item} ', end=' ')
     print()
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -1352,8 +1368,9 @@ for bar, frequency in zip(axes.patches, frequencies):
 # Saving Snippets to a File with the %save Magic 
 %save RollDie.py 1-13
 
-%reset -f
-cls()
+# Cleaning up at end of snippet
+get_ipython().magic('reset -f')
+get_ipython().magic('clear')
  
 
 ##########################################################################
